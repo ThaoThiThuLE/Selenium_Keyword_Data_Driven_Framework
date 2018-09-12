@@ -1,0 +1,34 @@
+2017-04-18 22:19:18,892 INFO  [Log] **************************************************************************************** 
+2017-04-18 22:19:18,892 INFO  [Log] **************************************************************************************** 
+2017-04-18 22:19:18,892 INFO  [Log] $$$$$$$$$$$$$$$$$$$$$                 LogIn_01       $$$$$$$$$$$$$$$$$$$$$$$$$ 
+2017-04-18 22:19:18,892 INFO  [Log] **************************************************************************************** 
+2017-04-18 22:19:18,892 INFO  [Log] **************************************************************************************** 
+2017-04-18 22:19:18,892 ERROR [Log] Class Utils | Method getCellData | Exception desc : null 
+2017-04-18 22:19:18,892 INFO  [Log] Opening Browser 
+2017-04-18 22:19:26,240 INFO  [Log] Mozilla browser started 
+2017-04-18 22:19:26,786 INFO  [Log] Navigating to URL 
+2017-04-18 22:19:34,381 INFO  [Log] Clicking on Webelement btn_MyAccount 
+2017-04-18 22:19:34,635 INFO  [Log] Entering the text in txtbx_UserName 
+2017-04-18 22:19:37,395 INFO  [Log] Entering the text in txtbx_Password 
+2017-04-18 22:19:38,228 INFO  [Log] Clicking on Webelement btn_LogIn 
+2017-04-18 22:19:38,552 INFO  [Log] Wait for 5 seconds 
+2017-04-18 22:19:43,697 INFO  [Log] Clicking on Webelement btn_LogOut 
+2017-04-18 22:19:47,624 ERROR [Log] Not able to click --- Failed to decode response from marionette
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'LMISWKSG4462QN6', ip: '192.168.0.25', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\thao.le\AppData\Local\Temp\rust_mozprofile.4Pmlet4pDfft, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=6.3, moz:processID=8260, browserName=firefox, platformName=windows_nt}]
+Session ID: 23f7c95f-1b9d-4b2c-958b-5fdbdd115a0a
+*** Element info: {Using=xpath, value=.//*[@id='account_logout']/a} 
+2017-04-18 22:19:47,717 INFO  [Log] Closing the browser 
+2017-04-18 22:19:48,592 ERROR [Log] Not able to Close the Browser --- Tried to run command without establishing a connection
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'LMISWKSG4462QN6', ip: '192.168.0.25', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\thao.le\AppData\Local\Temp\rust_mozprofile.4Pmlet4pDfft, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=6.3, moz:processID=8260, browserName=firefox, platformName=windows_nt}]
+Session ID: 23f7c95f-1b9d-4b2c-958b-5fdbdd115a0a 
+2017-04-18 22:19:48,686 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2017-04-18 22:19:48,686 INFO  [Log] X 
+2017-04-18 22:19:48,686 INFO  [Log] X 
+2017-04-18 22:19:48,686 INFO  [Log] X 
+2017-04-18 22:19:48,686 INFO  [Log] X 
