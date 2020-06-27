@@ -1,0 +1,9 @@
+# Default ignored files
+.idea/
+*.iml
+chromedriver.exe
+chromedriver
+target
+test-output
+*.kotlin_module
+bin
