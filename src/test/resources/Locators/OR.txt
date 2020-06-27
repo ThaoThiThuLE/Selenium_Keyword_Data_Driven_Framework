@@ -1,0 +1,7 @@
+# Basic Demos Page Objects
+btn_LogOut=.//button[text()='Logout']
+
+# Login Page Object
+txtbx_UserName=.//input[@id='username']
+txtbx_Password=.//input[@id='password']
+btn_LogIn=.//button[@class='app-btn app-btn-hover']

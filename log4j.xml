@@ -3,9 +3,13 @@
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
-
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <param name="Threshold" value="INFO" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{HH:mm:ss,SSS} - [%t] (%F:%L) - %p: %m%n" />
+        </layout>
+    </appender>
 <appender name="fileAppender" class="org.apache.log4j.FileAppender">
-
 <param name="Threshold" value="INFO" />
 
 <param name="File" value="logfile.log"/>
@@ -23,6 +27,7 @@
 <level value="INFO"/>
 
 <appender-ref ref="fileAppender"/>
+    <appender-ref ref="CONSOLE"/>
 
 </root>
 

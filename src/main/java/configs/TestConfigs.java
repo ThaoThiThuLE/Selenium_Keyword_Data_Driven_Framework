@@ -1,10 +1,12 @@
-package config;
+package configs;
 
-public class Constants {
+public class TestConfigs {
 	
 	//System Variables
-	public static final String URL = "http://www.store.demoqa.com";
-	static String workingDir=System.getProperty("user.dir");
+	public static final String URL = "https://msrobotassistant.com/login";
+	public static String workingDir="C://Users//ThaoLe//Documents//GitHub//Selenium_Keyword_Data_Driven_Framework";
+
+//	public static String workingDir=System.getProperty("user.dir");
 	public static final String Path_TestData = workingDir + "//src//main//java//dataEngine//DataEngine.xlsx";
 	public static final String Path_OR = workingDir + "//src//main//java//config//OR.txt";
 	public static final String File_TestData = "DataEngine.xlsx";
@@ -26,8 +28,8 @@ public class Constants {
 	public static final String Sheet_TestCases = "Test Cases";
 	
 	// Test Data
-	public static final String UserName = "testuser_3";
-	public static final String Password = "Test@123";
+	public static final String UserName = "test";
+	public static final String Password = "123456";
 
 
 	

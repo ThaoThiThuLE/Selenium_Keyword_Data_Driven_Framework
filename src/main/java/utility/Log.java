@@ -11,21 +11,19 @@ public class Log {
 	public static void startTestCase(String sTestCaseName){
 
 	   Log.info("****************************************************************************************");
-	   Log.info("****************************************************************************************");
-	   Log.info("$$$$$$$$$$$$$$$$$$$$$                 "+sTestCaseName+ "       $$$$$$$$$$$$$$$$$$$$$$$$$");
-	   Log.info("****************************************************************************************");
+	   Log.info("====================               "+sTestCaseName+ "       ====================");
 	   Log.info("****************************************************************************************");
 
 	   }
 
 	//This is to print log for the ending of the test case
-	public static void endTestCase(String sTestCaseName){
-	   Log.info("XXXXXXXXXXXXXXXXXXXXXXX             "+"-E---N---D-"+"             XXXXXXXXXXXXXXXXXXXXXX");
-	   Log.info("X");
-	   Log.info("X");
-	   Log.info("X");
-	   Log.info("X");
-
+	public static void endTestCase(String sTestCaseName, boolean bResult){
+		if(bResult==false){
+			Log.fatal(sTestCaseName + " is FAILED");
+		}else {
+			Log.info(sTestCaseName + " is PASSED");
+		}
+	   Log.info("=====================               "+"-E---N---D-"+"       ============================");
 	   }
 
     // Need to create these methods, so that they can be called  

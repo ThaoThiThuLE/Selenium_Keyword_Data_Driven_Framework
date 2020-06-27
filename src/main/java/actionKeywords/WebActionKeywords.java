@@ -1,19 +1,20 @@
-package config;
+package actionKeywords;
 
 import java.util.concurrent.TimeUnit;
 
-import static executionEngine.DriverScript.OR;
+import static executionManager.ExcelExecution.OR;
 
+import configs.TestConfigs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-import executionEngine.DriverScript;
+import executionManager.ExcelExecution;
 import utility.Log;
 
-public class ActionKeywords {
+public class WebActionKeywords {
 	
 	public static WebDriver driver;
 			
@@ -26,12 +27,10 @@ public class ActionKeywords {
 				Log.info("Mozilla browser started");				
 				}
 			else if(data.equals("IE")){
-				//Dummy Code, Implement you own code
 				driver=new InternetExplorerDriver();
 				Log.info("IE browser started");
 				}
 			else if(data.equals("Chrome")){
-				//Dummy Code, Implement you own code
 				driver=new ChromeDriver();
 				Log.info("Chrome browser started");
 				}
@@ -40,7 +39,7 @@ public class ActionKeywords {
 			driver.manage().timeouts().implicitlyWait(implicitWaitTime, TimeUnit.SECONDS);
 		}catch (Exception e){
 			Log.info("Not able to open the Browser --- " + e.getMessage());
-			DriverScript.bResult = false;
+			ExcelExecution.bResult = false;
 		}
 	}
 	
@@ -48,10 +47,10 @@ public class ActionKeywords {
 		try{
 			Log.info("Navigating to URL");
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.get(Constants.URL);
+			driver.get(TestConfigs.URL);
 		}catch(Exception e){
 			Log.info("Not able to navigate --- " + e.getMessage());
-			DriverScript.bResult = false;
+			ExcelExecution.bResult = false;
 			}
 		}
 	
@@ -61,7 +60,7 @@ public class ActionKeywords {
 			driver.quit();
 		 }catch(Exception e){
 			 Log.error("Not able to Close the Browser --- " + e.getMessage());
-			 DriverScript.bResult = false;
+			 ExcelExecution.bResult = false;
          	}
 		}
 	public static void click(String object, String data){
@@ -70,17 +69,16 @@ public class ActionKeywords {
 			driver.findElement(By.xpath(OR.getProperty(object))).click();
 		 }catch(Exception e){
  			Log.error("Not able to click --- " + e.getMessage());
- 			DriverScript.bResult = false;
+ 			ExcelExecution.bResult = false;
          	}
 		}
-	
 	public static void input(String object, String data){
 		try{
 			Log.info("Entering the text in " + object);
 			driver.findElement(By.xpath(OR.getProperty(object))).sendKeys(data);
 		 }catch(Exception e){
 			 Log.error("Not able to Enter UserName --- " + e.getMessage());
-			 DriverScript.bResult = false;
+			 ExcelExecution.bResult = false;
 		 	}
 		}
 	public static void waitFor(String object, String data) throws Exception{
@@ -89,7 +87,7 @@ public class ActionKeywords {
 			Thread.sleep(5000);
 		 }catch(Exception e){
 			 Log.error("Not able to Wait --- " + e.getMessage());
-			 DriverScript.bResult = false;
+			 ExcelExecution.bResult = false;
          }
 	}
 	
