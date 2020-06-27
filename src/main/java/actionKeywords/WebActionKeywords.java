@@ -13,7 +13,11 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import executionManager.ExcelExecution;
 import utility.Log;
-
+/**
+ * All Web Action Keywords
+ * @author thao.le
+ *
+ */
 public class WebActionKeywords {
 	
 	public static WebDriver driver;

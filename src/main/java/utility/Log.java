@@ -1,11 +1,15 @@
 package utility;
 
 import org.apache.log4j.Logger;
-
+/**
+ * Log using log4j file
+ * @author thao.le
+ *
+ */
 public class Log {
 
 		//Initialize Log4j logs
-		private static Logger Log = Logger.getLogger(Log.class.getName());//
+		private static Logger Log = Logger.getLogger(Log.class.getName());
 
 	// This is to print log for the beginning of the test case, as we usually run so many test cases as a test suite
 	public static void startTestCase(String sTestCaseName){

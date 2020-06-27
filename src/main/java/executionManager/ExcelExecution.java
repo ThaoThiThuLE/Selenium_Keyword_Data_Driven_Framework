@@ -1,6 +1,7 @@
 package executionManager;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.lang.reflect.Method;
 import java.util.Properties;
 
@@ -10,7 +11,12 @@ import actionKeywords.WebActionKeywords;
 import configs.TestConfigs;
 import dataEngine.ExcelHandler;
 import utility.Log;
- 
+
+/**
+ * Keyword driven execution using Excel file
+ * @author thao.le
+ *
+ */
 public class ExcelExecution {
 	
 	public static Properties OR;
@@ -27,26 +33,30 @@ public class ExcelExecution {
 	public static boolean bResult;
 	
 	
-	public ExcelExecution() throws NoSuchMethodException, SecurityException{
+	public ExcelExecution() throws Exception {
+		String Path_OR = TestConfigs.Path_OR;
+		FileInputStream fs = new FileInputStream(Path_OR);
+		OR= new Properties(System.getProperties());
+		OR.load(fs);
 		actionKeywords = new WebActionKeywords();
 		method = actionKeywords.getClass().getMethods();	
 	}
 	
-    public static void main(String[] args) throws Exception {
-		System.out.println("tests main - "+ TestConfigs.Path_TestData);
-    	ExcelHandler.setExcelFile(TestConfigs.Path_TestData);
-    	DOMConfigurator.configure(TestConfigs.workingDir + "\\log4j.xml");
-    	String Path_OR = TestConfigs.Path_OR;
-		FileInputStream fs = new FileInputStream(Path_OR);
-		OR= new Properties(System.getProperties());
-		OR.load(fs);
-
-		ExcelExecution startEngine = new ExcelExecution();
-		startEngine.execute_TestCase();
+//    public static void main(String[] args) throws Exception {
+//		System.out.println("tests main - "+ TestConfigs.Path_TestData);
+//    	ExcelHandler.setExcelFile(TestConfigs.Path_TestData);
+//    	DOMConfigurator.configure(TestConfigs.workingDir + "\\log4j.xml");
+//    	String Path_OR = TestConfigs.Path_OR;
+//		FileInputStream fs = new FileInputStream(Path_OR);
+//		OR= new Properties(System.getProperties());
+//		OR.load(fs);
+//
+//		ExcelExecution startEngine = new ExcelExecution();
+//		startEngine.execute_TestCase();
+//
+//    }
 		
-    }
-		
-    private void execute_TestCase() throws Exception {
+    public void execute_TestCase() throws Exception {
 	    	int iTotalTestCases = ExcelHandler.getRowCount(TestConfigs.Sheet_TestCases);
 			for(int iTestcase=1;iTestcase<iTotalTestCases;iTestcase++){
 				bResult = true;

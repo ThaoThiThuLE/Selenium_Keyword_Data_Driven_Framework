@@ -11,6 +11,11 @@ import configs.TestConfigs;
 import executionManager.ExcelExecution;
 import utility.Log;
 
+/**
+ * To read & write excel file
+ * @author thao.le
+ *
+ */
 public class ExcelHandler {
                 private static XSSFSheet ExcelWSheet;
                 private static XSSFWorkbook ExcelWBook;

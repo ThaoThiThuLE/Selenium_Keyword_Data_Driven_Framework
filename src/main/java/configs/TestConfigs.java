@@ -1,14 +1,17 @@
 package configs;
 
+/**
+ * Config values
+ * @author thao.le
+ *
+ */
 public class TestConfigs {
 	
 	//System Variables
 	public static final String URL = "https://msrobotassistant.com/login";
-	public static String workingDir="C://Users//ThaoLe//Documents//GitHub//Selenium_Keyword_Data_Driven_Framework";
-
-//	public static String workingDir=System.getProperty("user.dir");
-	public static final String Path_TestData = workingDir + "//src//main//java//dataEngine//DataEngine.xlsx";
-	public static final String Path_OR = workingDir + "//src//main//java//config//OR.txt";
+	public static String workingDir=System.getProperty("user.dir");
+	public static final String Path_TestData = workingDir + "//src//test//resources//testData//DataEngine.xlsx";
+	public static final String Path_OR = workingDir + "//src//test//resources//Locators//OR.txt";
 	public static final String File_TestData = "DataEngine.xlsx";
 	public static final String KEYWORD_FAIL = "FAIL";
 	public static final String KEYWORD_PASS = "PASS";
