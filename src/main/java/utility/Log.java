@@ -1,6 +1,8 @@
 package utility;
 
 import org.apache.log4j.Logger;
+import org.testng.Reporter;
+
 /**
  * Log using log4j file
  * @author thao.le
