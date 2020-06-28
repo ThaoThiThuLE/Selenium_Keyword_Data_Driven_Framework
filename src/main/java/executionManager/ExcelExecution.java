@@ -41,21 +41,7 @@ public class ExcelExecution {
 		actionKeywords = new WebActionKeywords();
 		method = actionKeywords.getClass().getMethods();	
 	}
-	
-//    public static void main(String[] args) throws Exception {
-//		System.out.println("tests main - "+ TestConfigs.Path_TestData);
-//    	ExcelHandler.setExcelFile(TestConfigs.Path_TestData);
-//    	DOMConfigurator.configure(TestConfigs.workingDir + "\\log4j.xml");
-//    	String Path_OR = TestConfigs.Path_OR;
-//		FileInputStream fs = new FileInputStream(Path_OR);
-//		OR= new Properties(System.getProperties());
-//		OR.load(fs);
-//
-//		ExcelExecution startEngine = new ExcelExecution();
-//		startEngine.execute_TestCase();
-//
-//    }
-		
+
     public void execute_TestCase() throws Exception {
 	    	int iTotalTestCases = ExcelHandler.getRowCount(TestConfigs.Sheet_TestCases);
 			for(int iTestcase=1;iTestcase<iTotalTestCases;iTestcase++){

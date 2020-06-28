@@ -14,7 +14,7 @@ public class BasicDemoSite_Tests {
     public void BasicDemoExecution() throws Exception {
         ExcelHandler.setExcelFile(TestConfigs.Path_TestData);
         DOMConfigurator.configure(TestConfigs.workingDir + "\\log4j.xml");
-        ExcelExecution startEngine = new ExcelExecution();
-        startEngine.execute_TestCase();
+        ExcelExecution executeTests = new ExcelExecution();
+        executeTests.execute_TestCase();
     }
 }

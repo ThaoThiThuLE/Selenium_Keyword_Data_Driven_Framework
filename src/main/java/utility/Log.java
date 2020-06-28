@@ -30,7 +30,6 @@ public class Log {
 	   Log.info("=====================               "+"-E---N---D-"+"       ============================");
 	   }
 
-    // Need to create these methods, so that they can be called  
 	public static void info(String message) {
 	   Log.info(message);
 	 }
